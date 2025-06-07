@@ -8,6 +8,7 @@ scikit-learn
 pandas
 tiktoken
 PyMuPDF
+pillow
 pytesseract
 markdown
 psycopg2-binary
