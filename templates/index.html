@@ -12,11 +12,12 @@
 <body>
   <main class="container" role="main" aria-labelledby="page-title">
     <h1 id="page-title">Factcheckr AI</h1>
+    <h2>Guarding your financial decisions with verified facts.</h2>
+
 
     <form method="POST" enctype="multipart/form-data" novalidate>
       <div class="textarea-wrapper">
-        <label for="news_text" class="sr-only">Paste financial news or text here</label>
-        <textarea id="news_text" name="news_text" placeholder="Paste financial news or text here..." rows="6"
+        <textarea id="news_text" name="news_text" placeholder="Paste your text here or upload your file.." rows="6"
           required>{{ input_text or '' }}</textarea>
 
         <!-- Only one file input needed, with accept attribute -->
@@ -26,12 +27,19 @@
 
       <button type="submit">Submit</button>
     </form>
-
+<br></br>
     {% if response %}
-    <section class="output" aria-live="polite" aria-atomic="true" tabindex="-1">
-      {{ response | safe }}
-    </section>
+    <div class="output">
+      <div class="result-header">
+        <h3>Analysis Result</h3>
+        <a href="https://example.com/improve" target="_blank" class="improve-link">improve the result?</a>
+      </div>
+      <div class="formatted-response">
+        {{ response|safe }}
+      </div>
+    </div>
     {% endif %}
+    </div>
   </main>
 </body>
 

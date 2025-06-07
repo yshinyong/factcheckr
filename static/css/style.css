@@ -23,6 +23,13 @@ h1 {
   box-sizing: inherit;
 }
 
+h2 {
+  padding-left: 20px;
+  font-size: small;
+  font-weight: normal;
+  font-style: italic;
+}
+
 .chat-container {
   display: flex;
   flex-direction: column;
@@ -216,3 +223,24 @@ button:hover {
 .improve-link:hover {
   text-decoration: underline;
 }
+
+  .file-upload-label {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #fffefe;
+    color: rgb(92, 92, 92);
+    font-size: 10px;
+    font-family: sans-serif;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .file-upload-label:hover {
+    background-color: #c2c2c2f3;
+  }
+
+  #file-upload {
+    display: none;
+  }
