@@ -12,3 +12,4 @@ pytesseract
 markdown
 psycopg2-binary
 python-dotenv
+gunicorn
