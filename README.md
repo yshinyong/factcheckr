@@ -1,4 +1,4 @@
-# 🧠 Factcheckr AI
+# Factcheckr AI
 
 Factcheckr AI is a web-based app that allows users to input **financial news or text**, either by pasting text or uploading an image. The backend AI model analyzes the content and returns:
 
@@ -21,20 +21,19 @@ This app can be deployed to **Azure App Service** with minimal setup (see below)
 ```bash
 git clone https://github.com/yshinyong/factcheckr.git
 cd factcheckr
-
+```
 
 ### 2. Create and Activate a Python Virtual Environment
 
 ```bash
 python3 -m venv venv
 source venv/bin/activate
-
+```
 You should now see (venv) at the beginning of your terminal prompt.
 
 ### 3. Install Dependencies
 ```bash
 pip install -r requirements.txt
-```
 
 ### 4. Set Environment Variables
 Export the following environment variables (or set them in a .env file):
@@ -47,7 +46,7 @@ export AZURE_OPENAI_KEY="your_api_key"
 ```bash
 python3 app.py
 ```
-Visit http://127.0.0.1:5000 to use the app.
+Visit the given URL to use the app.
 
 ## ☁️ Deploying to Azure App Service
 To deploy this app to Azure App Service, ensure:
