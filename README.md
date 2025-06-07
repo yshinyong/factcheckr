@@ -43,7 +43,7 @@ export AZURE_OPENAI_ENDPOINT="your_endpoint"
 export AZURE_OPENAI_KEY="your_api_key"
 ```
 
-5. Run the App Locally
+### 5. Run the App Locally
 ```bash
 python3 app.py
 ```
