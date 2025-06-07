@@ -1,0 +1,114 @@
+# --- Python Specific ---
+# Byte-code files
+*.pyc
+*.pyd
+*.pyo
+__pycache__/
+
+# Distribution / packaging
+.Python
+build/
+dist/
+eggs/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+.env/
+venv/
+env/
+# These are common names for virtual environments.
+# If you use a different name (e.g., .myvenv), add it here.
+
+# MyPy cache
+.mypy_cache/
+
+# pytest cache (if you use pytest)
+.pytest_cache/
+
+# Jupyter Notebook files (if applicable)
+.ipynb_checkpoints
+
+# --- OS Specific ---
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+System Volume Information/
+
+# Linux
+*.swp # Vim swap files
+*.swo # Vim swap files
+
+# --- IDE/Editor Specific ---
+# VS Code
+.vscode/
+# Exclude folder, but not settings files
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+# Local History for VS Code
+.history/
+
+# PyCharm
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.un~
+*.bak
+
+# --- Database Specific ---
+# SQLite files (if you use SQLite, e.g., for development)
+*.sqlite3
+*.db
+/db.sqlite3
+
+# If you store other database-related files locally (e.g., dump files)
+*.sql.gz
+*.pg_dump
+
+# --- Log Files ---
+*.log
+logs/
+.log/
+
+# --- Environment Variables / Secrets ---
+# Crucial: Never commit sensitive information!
+.env
+.flaskenv
+*.env
+# Any other file holding credentials or secrets
+# e.g., keys.py, config.local.json, etc.
+
+# --- Build Artifacts / Temp Files ---
+*.tmp
+*.temp
+*.swp
+*.bak
+*.old
+
+# --- Deployment / Cloud Specific ---
+# Azure specific files (if App Service generates some local files)
+# .deployment
+# .azure/
+
+# Node.js (if you integrate with JS frontend, e.g., with npm/yarn)
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log

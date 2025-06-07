@@ -1,0 +1,14 @@
+flask
+openai
+num2words
+matplotlib
+plotly
+scipy
+scikit-learn
+pandas
+tiktoken
+PyMuPDF
+pytesseract
+markdown
+psycopg2-binary
+python-dotenv

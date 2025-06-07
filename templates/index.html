@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Factcheckr AI</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+</head>
+
+<body>
+  <main class="container" role="main" aria-labelledby="page-title">
+    <h1 id="page-title">Factcheckr AI</h1>
+
+    <form method="POST" enctype="multipart/form-data" novalidate>
+      <div class="textarea-wrapper">
+        <label for="news_text" class="sr-only">Paste financial news or text here</label>
+        <textarea id="news_text" name="news_text" placeholder="Paste financial news or text here..." rows="6"
+          required>{{ input_text or '' }}</textarea>
+
+        <!-- Only one file input needed, with accept attribute -->
+        <label for="file-upload" class="file-upload-label">Upload file (txt, pdf, images)</label>
+        <input type="file" id="file-upload" name="file" accept=".txt,.pdf,.png,.jpg,.jpeg" />
+      </div>
+
+      <button type="submit">Submit</button>
+    </form>
+
+    {% if response %}
+    <section class="output" aria-live="polite" aria-atomic="true" tabindex="-1
