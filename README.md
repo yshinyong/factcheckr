@@ -34,6 +34,7 @@ You should now see (venv) at the beginning of your terminal prompt.
 ### 3. Install Dependencies
 ```bash
 pip install -r requirements.txt
+```
 
 ### 4. Set Environment Variables
 Export the following environment variables (or set them in a .env file):
