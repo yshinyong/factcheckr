@@ -10,18 +10,24 @@ import io
 app = Flask(__name__)
 
 # ========== Azure OpenAI Configuration ==========
-AZURE_OPENAI_KEY = os.getenv("AZURE_OPENAI_KEY")
-AZURE_OPENAI_ENDPOINT = os.getenv("AZURE_OPENAI_ENDPOINT")
+
 deployment_name = "gpt-4.1"
 
-if not AZURE_OPENAI_KEY or not AZURE_OPENAI_ENDPOINT:
-    raise EnvironmentError("Missing AZURE_OPENAI_KEY or AZURE_OPENAI_ENDPOINT environment variables.")
+def get_openai_client():
+    key = os.getenv("AZURE_OPENAI_KEY")
+    endpoint = os.getenv("AZURE_OPENAI_ENDPOINT")
 
-client = AzureOpenAI(
-    api_key=AZURE_OPENAI_KEY,
-    api_version="2024-12-01-preview",
-    azure_endpoint=AZURE_OPENAI_ENDPOINT
-)
+    if not key or not endpoint:
+        raise EnvironmentError("Missing AZURE_OPENAI_KEY or AZURE_OPENAI_ENDPOINT environment variables.")
+
+    return AzureOpenAI(
+        api_key=key,
+        api_version="2024-12-01-preview",
+        azure_endpoint=endpoint
+    )
+
+# Then inside your route or wherever needed:
+client = get_openai_client()
 
 # ========== System Prompt ==========
 system_prompt = """
