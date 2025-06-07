@@ -28,4 +28,11 @@
     </form>
 
     {% if response %}
-    <section class="output" aria-live="polite" aria-atomic="true" tabindex="-1
+    <section class="output" aria-live="polite" aria-atomic="true" tabindex="-1">
+      {{ response | safe }}
+    </section>
+    {% endif %}
+  </main>
+</body>
+
+</html>
