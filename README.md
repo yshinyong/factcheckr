@@ -10,7 +10,7 @@ Factcheckr AI is a web-based app that allows users to input **financial news or 
 
 ## 🌐 Live Demo / Deployment
 
-This app can be deployed to **Azure App Service** with minimal setup (see below).
+This app can be deployed to **Azure App Service** with minimal setup.
 
 ---
 
@@ -61,10 +61,9 @@ gunicorn app:app --bind=0.0.0.0
 
 - Set environment variables (AZURE_OPENAI_ENDPOINT, AZURE_OPENAI_KEY) in the Azure App Service Configuration > Application settings.
 
-### Embedding
-This Python script enables semantic search on financial fact-checking articles using Azure OpenAI's embedding models.
-
-What it Does:
+## Others
+### embedding
+This Python script enables semantic search on financial fact-checking articles using Azure OpenAI's embedding models. What it Does:
 - Processes finfact.json: Reads, cleans, and combines text data from the JSON file.
 - Tokenizes & Filters: Counts text tokens and removes overly long documents.
 - Generates Embeddings: Converts document text into numerical vectors using Azure OpenAI's text-embedding-ada-002 model.
