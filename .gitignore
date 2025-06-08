@@ -111,4 +111,7 @@ logs/
 node_modules/
 npm-debug.log
 yarn-debug.log
-yarn-error.log
+yarn-error.logdata/df_finfact_processed.csv
+data/df_finfact_processed.csv
+data/df_finfact_processed.csv
+data/df_finfact_processed.csv
