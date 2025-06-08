@@ -4,14 +4,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Factcheckr AI</title>
+  <title>Factcheckr.AI</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
 </head>
 
 <body>
   <main class="container" role="main" aria-labelledby="page-title">
-    <h1 id="page-title">Factcheckr AI</h1>
+    <h1 id="page-title">Factcheckr.AI</h1>
     <h2>Guarding your financial decisions with verified facts.</h2>
 
 
@@ -21,13 +21,17 @@
           required>{{ input_text or '' }}</textarea>
 
         <!-- Only one file input needed, with accept attribute -->
-        <label for="file-upload" class="file-upload-label">Upload file (txt, pdf, images)</label>
-        <input type="file" id="file-upload" name="file" accept=".txt,.pdf,.png,.jpg,.jpeg" />
-      </div>
+        <div class="file-upload-wrapper">
 
-      <button type="submit">Submit</button>
+          <label for="file-upload" class="file-upload-label">Upload file (txt, pdf, images)</label>
+          <input type="file" id="file-upload" name="file" accept=".txt,.pdf,.png,.jpg,.jpeg" />
+          <span id="file-upload-indicator" class="file-upload-indicator"></span>
+          </div>
+        </div>
+
+        <button type="submit">Submit</button>
     </form>
-<br></br>
+    <br></br>
     {% if response %}
     <div class="output">
       <div class="result-header">
@@ -41,6 +45,22 @@
     {% endif %}
     </div>
   </main>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const fileInput = document.getElementById('file-upload');
+      const fileIndicator = document.getElementById('file-upload-indicator');
+
+      fileInput.addEventListener('change', function () {
+        if (fileInput.files.length > 0) {
+          const fileName = fileInput.files[0].name;
+          fileIndicator.textContent = `File selected: ${fileName}`;
+          fileIndicator.style.color = '#28a745'; /* Green color for success */
+        } else {
+          fileIndicator.textContent = '';
+        }
+      });
+    });
+  </script>
 </body>
 
 </html>
