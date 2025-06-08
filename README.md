@@ -6,6 +6,8 @@ Factcheckr AI is a web-based app that allows users to input **financial news or 
 - 🚨 **Misinformation Flags**
 - 😐 **Sentiment Classification**
 
+Refer to the factcheckrai_hackathon.pdf for more info!
+
 ---
 
 ## 🌐 Live Demo / Deployment
