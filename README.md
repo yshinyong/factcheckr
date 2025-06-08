@@ -60,3 +60,17 @@ gunicorn app:app --bind=0.0.0.0
 ````
 
 - Set environment variables (AZURE_OPENAI_ENDPOINT, AZURE_OPENAI_KEY) in the Azure App Service Configuration > Application settings.
+
+### Embedding
+This Python script enables semantic search on financial fact-checking articles using Azure OpenAI's embedding models.
+
+What it Does:
+- Processes finfact.json: Reads, cleans, and combines text data from the JSON file.
+- Tokenizes & Filters: Counts text tokens and removes overly long documents.
+- Generates Embeddings: Converts document text into numerical vectors using Azure OpenAI's text-embedding-ada-002 model.
+- Performs Semantic Search: Calculates cosine similarity between a user query and document embeddings to find and return the most relevant articles.
+
+After running the codes, save the embedding to Cosmos DB then use the saved data for fine-tuning GPT 4.1 model.
+
+### write_into_db
+This Python script is designed to ingest financial fact data, including their AI-generated embeddings, from a CSV file into a MongoDB database.
